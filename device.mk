@@ -16,14 +16,6 @@
 # Inherit from msm8917-common
 $(call inherit-product, device/samsung/msm8917-common/msm8917.mk)
 
-#Hardware
-PRODUCT_BOARD_PLATFORM := $(msm8917) 
-PRODUCT_USES_QCOM_HARDWARE := true
-
-#HALs
-SRC_AUDIO_HAL_DIR := hardware/qcom-caf/$(msm8996)/audio 
-SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/$(msm8996)/display 
-SRC_MEDIA_HAL_DIR := hardware/qcom-caf/$(msm8996)/media
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/B13QL_s5k3l6xx_module_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/B13QL_s5k3l6xx_module_info.xml \
@@ -39,7 +31,7 @@ PRODUCT_COPY_FILES += \
 	
 #soong
 PRODUCT_SOONG_NAMESPACES += \
-$(LOCAL_PATH)/hardware/qcom-caf/$(msm8996)
+
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
